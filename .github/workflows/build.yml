@@ -1,17 +1,6 @@
 name: Build
 
-on:
-  push:
-    branches:
-      - main
-      - "[0-9]+.[0-9]+"
-      - "[0-9]+.[0-9]+.x"
-    paths-ignore:
-      - '.gitignore'
-      - 'CODEOWNERS'
-      - 'LICENSE'
-      - 'README*'
-  pull_request:
+on: workflow_dispatch
 
 env:
   QUARKUS_CXF_MTOM_LARGE_ATTACHMENT_INCREMENT_KB: 512
